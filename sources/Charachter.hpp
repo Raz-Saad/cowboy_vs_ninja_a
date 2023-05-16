@@ -20,7 +20,7 @@ namespace ariel
         string getName();                                       // return the name of the Charachter
         int geHitPoints();                                      // return the hp of a Charachter
         Point getLocation();                                    // return the location of a Charachter
-        virtual string print();                                           // prints name,hp,location (look on git)
+        virtual string print();                                 // prints name,hp,location (look on git)
     };
 
 }

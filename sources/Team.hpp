@@ -1,5 +1,4 @@
 #pragma once
-#include "Charachter.hpp"
 #include "Cowboy.hpp"
 #include "OldNinja.hpp"
 #include "YoungNinja.hpp"
@@ -8,7 +7,7 @@ using namespace std;
 
 namespace ariel
 {
-    class Team : public Charachter
+    class Team
     {
         Charachter *group[10] = {NULL}; // a team of ninjas and cowboys
         Charachter *leader = NULL;
@@ -19,8 +18,8 @@ namespace ariel
         virtual ~Team();                  // destructor
         void add(Charachter *charachter); // adds a Charachter to the team
         virtual void attack(Team *other); // attacks other team
-        int stillAlive();
-        string print();
+        int stillAlive();                 // returns how many members in the gorup are alive
+        virtual string print();
         int get_amount_of_members(); // returns how many members are in the group at the moment
         Charachter **getGroup();     // return a pointer to the group
     };

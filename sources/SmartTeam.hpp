@@ -8,10 +8,9 @@ namespace ariel
     {
 
     public:
-        SmartTeam(Charachter *leader);         // constructor ,getting a pointer of a leader of the team
-        ~SmartTeam();                          // destructor
-         void attack(Team *other);         // attacks other team
-         string print();
-        
+        SmartTeam(Charachter *leader); // constructor ,getting a pointer of a leader of the team
+        ~SmartTeam();                  // destructor
+        void attack(Team *other);      // attacks other team
+        string print();
     };
 }

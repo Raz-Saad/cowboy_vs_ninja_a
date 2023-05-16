@@ -17,9 +17,9 @@ namespace ariel
 
     double Point::distance(const Point &other)
     {
-        double x = pow((other.x_p-this->x_p),2);
-        double y = pow((other.y_p-this->y_p),2);
-        return sqrt(x+y);
+        double x = pow((other.x_p - this->x_p), 2);
+        double y = pow((other.y_p - this->y_p), 2);
+        return sqrt(x + y);
     }
 
     string Point::print()
@@ -40,6 +40,16 @@ namespace ariel
         double newY = src.y_p + (dst.y_p - src.y_p) * ratio;
 
         return Point(newX, newY);
+    }
+    // returns x_p
+    double Point::getX()
+    {
+        return x_p;
+    }
+    // returns y_p
+    double Point::getY()
+    {
+        return y_p;
     }
 
 }

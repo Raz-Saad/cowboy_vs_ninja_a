@@ -13,6 +13,7 @@ namespace ariel
         void move(Charachter *other);                                 // moves to the other characther the distance that queal to the speed
         void slash(Charachter *other);                                // if the ninja is alive and the enemy is 1 meter away from the ninja
                                                                       //, the ninja does 40 dmg
+        int getSpeed();                                               // return speed
     };
 
 }

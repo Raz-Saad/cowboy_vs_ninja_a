@@ -13,6 +13,7 @@ namespace ariel
         void shoot(Charachter *other);       // shot other Charachter if cowboy isalive, does 10dmg to him and ammo -1
         bool hasboolets();                   // return true if ammo >0
         void reload();                       // insert 6 bullets into ammo_amount
+        int getAmmo_amount();                // return ammo_amount
     };
 
 }

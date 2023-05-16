@@ -10,12 +10,12 @@ namespace ariel
     }
     void Cowboy::shoot(Charachter *other)
     {
-        if (hasboolets())
+        if (this->isAlive() && hasboolets())
         {
         }
         else
         {
-            throw std::runtime_error("there is no ammo left");
+            throw std::runtime_error("can not shoot, the cowboy is dead or out of ammo");
         }
     }
     // shot other Charachter if cowboy isalive, does 10dmg to him and ammo -1
@@ -30,5 +30,10 @@ namespace ariel
     void Cowboy::reload() // insert 6 bullets into ammo_amount
     {
         this->ammo_amount = 6;
+    }
+    // return ammo_amount
+    int Cowboy::getAmmo_amount()
+    {
+        return ammo_amount;
     }
 }
