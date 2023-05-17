@@ -38,6 +38,8 @@ TEST_CASE("Test 2 - Check Charachter functions")
 
     Raz->hit(25);
     CHECK(Raz->geHitPoints() == 85);
+    delete Raz;
+    delete Maor;
 }
 TEST_CASE("Test 3 - Check Cowboy initialization and functions")
 {
@@ -53,6 +55,8 @@ TEST_CASE("Test 3 - Check Cowboy initialization and functions")
     CHECK(Raz->hasboolets() == true);
     Raz->reload();
     CHECK(Raz->getAmmo_amount() == 6);
+    delete Raz;
+    delete Maor;
 }
 TEST_CASE("Test 4 - Cowboy check throws")
 {
@@ -75,6 +79,8 @@ TEST_CASE("Test 4 - Cowboy check throws")
     Raz->hit(110);
     CHECK(Raz->isAlive() == false); // cowboy is dead
     CHECK_THROWS(Raz->shoot(Maor)); // cowboy is dead he cant shoot
+    delete Raz;
+    delete Maor;
 }
 
 TEST_CASE("Test 5 - Check YoungNinja initialization")
@@ -84,6 +90,7 @@ TEST_CASE("Test 5 - Check YoungNinja initialization")
 
     CHECK(Raz->geHitPoints() == 100);
     CHECK(Raz->getSpeed() == 14);
+    delete Raz;
 }
 
 TEST_CASE("Test 6 - Check TrainedNinja initialization")
@@ -93,6 +100,7 @@ TEST_CASE("Test 6 - Check TrainedNinja initialization")
 
     CHECK(Raz->geHitPoints() == 120);
     CHECK(Raz->getSpeed() == 12);
+    delete Raz;
 }
 
 TEST_CASE("Test 7 - Check OldNinja initialization")
@@ -102,6 +110,7 @@ TEST_CASE("Test 7 - Check OldNinja initialization")
 
     CHECK(Raz->geHitPoints() == 150);
     CHECK(Raz->getSpeed() == 8);
+    delete Raz;
 }
 
 TEST_CASE("Test 8 - Ninja check throws")
@@ -116,6 +125,10 @@ TEST_CASE("Test 8 - Ninja check throws")
     Point c(5, 0);
     TrainedNinja *Ely = new TrainedNinja("Ely", c);
     CHECK_THROWS(Maor->slash(Ely)); // enemy is too far to attack
+
+    delete Raz;
+    delete Maor;
+    delete Ely;
 }
 
 TEST_CASE("Test 9 - Check Team initialization and functions")
@@ -174,4 +187,5 @@ TEST_CASE("Test 10 - Team check throws")
 
     Team team_B(pp11);
     CHECK_THROWS(team.attack(&team_B)); // all players in the team are dead cant attack
+    
 }
